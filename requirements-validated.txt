@@ -1,0 +1,11 @@
+# Versões diretas validadas; Python 3.12
+pandas==2.2.3
+openpyxl==3.1.5
+numpy==2.3.5
+scikit-learn==1.8.0
+streamlit==1.64.0
+plotly==6.9.0
+matplotlib==3.10.8
+Pillow==12.3.0
+PyYAML==6.0.3
+joblib==1.5.3

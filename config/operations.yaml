@@ -1,0 +1,18 @@
+pipeline:
+  # O SO libera o lock ao encerrar o processo; não há expiração por tempo.
+  lock_file: "data/runtime/daily_pipeline.lock"
+
+logging:
+  level: "INFO"
+  file: "logs/opsvision.log"
+  max_bytes: 2097152
+  backup_count: 3
+
+integration:
+  # O transporte é WebhookAlertAdapter; o formato do payload é configurável.
+  payload_format: "generic"
+  dry_run: true
+  webhook_url_env: "OPSVISION_WEBHOOK_URL"
+  timeout_seconds: 5
+  max_retries: 2
+  retry_backoff_seconds: 1.0

@@ -1,0 +1,22 @@
+policy_version: 1
+method: "historical_percentiles"
+historical_window: "all_available_daily_actuals"
+
+levels:
+  NORMAL:
+    lower_percentile: 0.00
+  ATENCAO:
+    lower_percentile: 0.75
+  ALTO:
+    lower_percentile: 0.90
+  CRITICO:
+    lower_percentile: 0.97
+
+documentation:
+  rationale: >-
+    Os limites são derivados da distribuição diária observada, evitando
+    números absolutos arbitrários. P75 sinaliza volume acima do padrão usual,
+    P90 demanda preparação reforçada e P97 representa cauda operacional rara.
+    Registros NORMAL são classificados, mas somente ATENCAO, ALTO e CRITICO
+    são persistidos como alertas operacionais.
+

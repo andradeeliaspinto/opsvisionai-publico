@@ -1,0 +1,6 @@
+[server]
+headless = true
+enableStaticServing = false
+
+[browser]
+gatherUsageStats = false

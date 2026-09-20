@@ -1,0 +1,3 @@
+# Versoes diretas e constraints transitivas da entrega validada.
+-c requirements-lock.txt
+-r requirements-validated.txt

@@ -1,0 +1,39 @@
+project:
+  name: OpsVisionAI
+  target: incident_count
+  forecast_horizon_days: 7
+  random_state: 42
+
+source:
+  name: "LW-DATASET — dataset oficial da atividade"
+  publisher: "FIAP / Enterprise Challenge"
+  provenance: "Arquivo oficial disponibilizado aos alunos para a atividade"
+  format: "xlsx"
+  sheet_name: "Dataset Geral"
+  expected_sha256: "a819cdbd85b8d7e2c18eb88b8397f814e73196ae76211e7efb06affd475cdf70"
+  license: "Não informada no arquivo fornecido"
+  raw_file: "data/raw/LW-DATASET.xlsx"
+
+analysis_window:
+  start_date: "2025-01-01"
+  end_date: "2025-12-31"
+  rationale: >-
+    O arquivo oficial contém 732 registros esparsos em 2023 e 2024. O ano de
+    2025 possui cobertura diária completa (365 dias com incidentes) e concentra
+    121.811 registros; por isso é adotado como janela contínua e comparável para
+    análise, treino, teste cronológico e inferência D+1 a D+7. Os registros
+    anteriores permanecem preservados na camada RAW e são apenas excluídos do
+    recorte analítico.
+
+validation:
+  development_fraction: 0.80
+  internal_training_fraction: 0.60
+  forecast_horizon_days: 7
+  metric: "MAE"
+
+inference:
+  predictions_file: "data/processed/forecast_predictions.csv"
+  current_forecast_file: "data/processed/forecast_7_days.csv"
+
+serving:
+  database_file: "data/serving/opsvision_serving.db"

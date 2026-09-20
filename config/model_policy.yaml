@@ -1,0 +1,23 @@
+policy_version: 1
+
+retraining:
+  minimum_days_between_runs: 30
+  minimum_new_actuals: 30
+  evaluation_window_days: 73
+  forecast_horizon_days: 7
+
+promotion:
+  minimum_relative_improvement_over_champion: 0.01
+  minimum_relative_improvement_over_baseline: 0.01
+  maximum_absolute_mean_bias_ratio: 0.10
+  minimum_horizons_won_against_baseline: 4
+  require_temporal_evaluation: true
+
+documentation:
+  rationale: >-
+    O Challenger só pode substituir o Champion quando for avaliado na mesma
+    janela cronológica, superar Champion e baseline por pelo menos 1%, manter
+    viés absoluto médio inferior a 10% do volume médio e vencer o baseline em
+    pelo menos quatro dos sete horizontes. A exigência de 30 novos realizados
+    evita retreinos sem informação adicional.
+

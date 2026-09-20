@@ -1,0 +1,2 @@
+# Ajuste o caminho absoluto. Horário e fuso do SO. Logs: logs/opsvision.log.
+0 6 * * * /bin/sh /caminho/OpsVisionAI_PosMVP/scripts/run_daily_pipeline.sh
