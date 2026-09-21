@@ -1,7 +1,6 @@
 # Assets oficiais do OpsVisionAI
 
-Estes arquivos foram fornecidos pelo responsável do projeto e são usados sem
-redesenho ou regeneração:
+Assets usados no dashboard e nos gráficos do projeto:
 
 | Arquivo | Uso | SHA-256 |
 |---|---|---|

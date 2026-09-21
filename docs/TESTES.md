@@ -28,6 +28,6 @@ O validador executa a suíte, AppTest, auditoria do XLSX e integridade do banco.
 
 A versão privada original possui 54 testes. Esta distribuição pública acrescenta os seis testes independentes; após reconstrução autorizada, a descoberta completa contém 60. O teste nativo Windows continua dependente de execução naquele SO.
 
-## Preparação desta distribuição
+## Verificação dos arquivos públicos
 
-Os seis testes públicos passaram nesta preparação. A verificação do índice Git aprovou o pacote e rejeitou fixtures isoladas de planilha, token fictício, binário, identificador de incidente e link simbólico. Também confirmou que lê o conteúdo preparado para commit mesmo quando o arquivo local já foi alterado. Não houve envio a GitHub nem implantação real no Community Cloud durante esses testes.
+O verificador lê o índice Git, mesmo quando o arquivo local tem alterações ainda não preparadas para commit. A lista de caminhos permitidos e as verificações de conteúdo ajudam a bloquear dados e credenciais. Ele não examina commits anteriores nem substitui a revisão dos textos publicados.

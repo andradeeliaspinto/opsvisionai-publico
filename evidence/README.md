@@ -1,3 +1,3 @@
-# Evidencias
+# Evidências
 
-Os resultados, prints, logs e payloads com dados pertencem a entrega privada. Esta pasta publica nao contem esses artefatos. Consulte [validacao](../docs/TESTES.md) para distinguir testes sem dados da auditoria completa.
+Resultados, gráficos, logs e payloads ficam na distribuição completa de acesso restrito. Os comandos de validação estão em [Testes](../docs/TESTES.md).

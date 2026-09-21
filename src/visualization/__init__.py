@@ -1,4 +1,4 @@
-"""Sistema visual oficial do OpsVisionAI."""
+"""Tema visual do OpsVisionAI."""
 
 from .theme import (
     ASSETS_DIR,

@@ -17,12 +17,7 @@ def file_sha256(path: Path) -> str:
 
 
 def download_source(config_path: str | Path = "config/project.yaml") -> Path:
-    """Valida o dataset oficial empacotado e registra sua proveniência.
-
-    O nome da função é preservado para manter compatibilidade com os scripts
-    existentes. Nesta versão não há download: o XLSX fornecido pela atividade
-    integra o pacote do projeto.
-    """
+    """Valida o XLSX local e registra os metadados da fonte, sem download."""
     config_path = Path(config_path)
     root = config_path.parent.parent
     config = yaml.safe_load(config_path.read_text(encoding="utf-8"))

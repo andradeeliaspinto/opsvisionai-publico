@@ -1,11 +1,24 @@
 # Publicação e demonstração
 
-Esta pasta é a versão pública de código. O repositório de avaliação é independente, privado, e contém os artefatos necessários ao dashboard. Não crie a versão pública apagando arquivos de um clone privado: o histórico pode continuar contendo-os.
+O repositório público contém o código e a documentação. A distribuição completa, de acesso restrito, inclui dados, modelos e resultados para execução e avaliação.
 
-Antes do primeiro commit, inicialize um repositório novo, use `.gitignore`, prepare os arquivos e execute `scripts/check_public_files.py --staged`. Revise o diff. Não envie ZIPs, dados, exports ou imagens do dashboard por releases, issues, wiki ou páginas públicas.
+## Repositório público
 
-O Streamlit deve ser implantado a partir do repositório privado, branch `main`, arquivo `app.py`, Python 3.12. A configuração `.streamlit/config.toml` desativa coleta de estatísticas de uso e arquivos estáticos; ela não implementa autenticação. O controle de acesso fica nas configurações da plataforma.
+Use um repositório independente, com histórico próprio. Excluir dados de um clone privado não os remove dos commits anteriores. Antes de publicar:
 
-Escolha acesso restrito e conceda visualização aos avaliadores. Não precisam receber acesso ao repositório com dataset. Um link aberto a qualquer pessoa exige autorização e revisão de tudo que as telas expõem; não é a configuração desta entrega. Sem dados, esta versão pública não será uma demonstração funcional do dashboard.
+```bash
+git add .
+python scripts/check_public_files.py --staged
+git diff --cached --stat
+git diff --cached
+```
 
-O responsável deve seguir o guia de publicação entregue separadamente. Nenhuma conta foi criada, nenhum push executado e nenhuma URL real de implantação foi inventada. Depois de hospedar e testar o acesso, o responsável pode adicionar o endereço real ao README e ao PPTX, identificando que exige autorização.
+O verificador examina o conteúdo preparado para commit. Dados, modelos, exports e imagens do dashboard também devem ficar fora de releases, issues, wiki e páginas públicas. As exclusões estão em [PRIVACY.md](../PRIVACY.md).
+
+## Dashboard restrito
+
+A implantação utiliza a distribuição completa em um repositório privado, com `app.py` como entrada e Python 3.12. A branch deve corresponder à selecionada na hospedagem, por exemplo `main`.
+
+A configuração `.streamlit/config.toml` incluída nesta versão pública desativa estatísticas de uso e arquivos estáticos. Ela não controla o acesso: a permissão de visualização é configurada na plataforma de hospedagem, separadamente da visibilidade do repositório.
+
+Os avaliadores recebem acesso ao aplicativo, sem precisar acessar o repositório com o dataset. O link de demonstração deve indicar essa restrição. A versão pública sem dados não oferece um dashboard funcional após a instalação.

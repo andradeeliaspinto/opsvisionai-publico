@@ -108,7 +108,7 @@ def validate_dashboard(output_path: Path) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Valida a versão canônica do dashboard OpsVisionAI com Streamlit AppTest."
+        description="Valida o dashboard OpsVisionAI com Streamlit AppTest."
     )
     parser.add_argument(
         "--output",
@@ -120,7 +120,7 @@ def main() -> int:
     output_path = args.output if args.output.is_absolute() else ROOT / args.output
     try:
         result = validate_dashboard(output_path)
-    except Exception as exc:  # mensagem operacional curta para execução acadêmica
+    except Exception as exc:
         print(f"FALHA: {exc}", file=sys.stderr)
         return 1
     print(json.dumps(result, ensure_ascii=False, indent=2))

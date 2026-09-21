@@ -1,1 +1,1 @@
-"""Núcleo reproduzível do MVP OpsVisionAI."""
+"""Módulos do OpsVisionAI."""

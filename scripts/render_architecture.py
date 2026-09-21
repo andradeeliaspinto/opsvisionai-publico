@@ -1,4 +1,4 @@
-"""Reproduz a arquitetura histórica da Fase 4, sem depender do Graphviz.
+"""Gera o diagrama histórico do MVP com Matplotlib.
 
 Para a arquitetura pós-MVP, use scripts/generate_post_mvp_evidence.py.
 """
@@ -308,7 +308,7 @@ def main():
     ax.text(
         0.04,
         0.055,
-        "Implementado localmente e reproduzível • sem cloud, API ou microsserviços fictícios • dashboard não carrega o modelo",
+        "Processamento local, previsões persistidas e dashboard conectado ao SQLite",
         fontsize=9,
         weight="bold",
         color=OPSVISION_COLORS["primary_blue"],

@@ -1,3 +1,3 @@
 # Dados restritos
 
-Este repositorio nao inclui XLSX, CSV, SQLite ou outros dados brutos/derivados. O contrato e a reproducao com acesso autorizado estao em [dados e reproducao](../docs/DADOS_E_REPRODUCAO.md).
+Esta distribuição não inclui dados brutos ou derivados. O contrato e a reprodução com acesso autorizado estão em [Dados e reprodução](../docs/DADOS_E_REPRODUCAO.md).

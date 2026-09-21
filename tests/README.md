@@ -1,3 +1,3 @@
 # Testes
 
-Consulte [escopos e comandos](../docs/TESTES.md). Execute `test_public_unit.py` sem dados. A suite completa depende de artefatos restritos e nao deve ser apresentada como validada apenas pela execucao desses seis testes.
+`test_public_unit.py` contém seis testes que executam sem dados restritos. A suíte completa depende dos artefatos da distribuição de avaliação. Os comandos e os dois escopos estão em [Testes](../docs/TESTES.md).

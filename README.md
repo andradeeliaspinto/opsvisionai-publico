@@ -4,7 +4,7 @@
 
 Código público de uma solução acadêmica de previsão de volume de incidentes para Coordenadores de NOC e Gestores de Operações de TI. O sistema estima D+1 a D+7, compara modelo e baseline, registra previsões e apoia a consulta operacional por Streamlit.
 
-**Este repositório não contém dataset, registros de incidentes, SQLite, modelos treinados, resultados persistidos ou capturas do dashboard.** A demonstração com dados pertence a uma implantação privada, com acesso dos avaliadores. Não existe link de produção fictício neste README.
+**Este repositório não contém dataset, registros de incidentes, SQLite, modelos treinados, resultados persistidos ou capturas do dashboard.** A demonstração com dados pertence a uma implantação privada, com acesso dos avaliadores.
 
 ## O que está implementado
 
@@ -56,7 +56,7 @@ Esses seis testes usam apenas fixtures artificiais em memória. Não representam
 
 **Clonar e instalar não basta para executar o dashboard com dados.** Não rode o pipeline esperando que ele baixe a fonte: a função de ingestão valida um arquivo local autorizado. Para reprodução, siga o documento de dados.
 
-## Antes de cada publicação
+## Verificação da publicação
 
 ```bash
 git add .
@@ -75,4 +75,4 @@ Integrações reais não foram acionadas. Retreino não equivale a promoção au
 
 A execução completa foi validada em Linux. Para Windows x64, as dependências foram resolvidas e o código revisado; não houve homologação nativa nesse sistema no ambiente de desenvolvimento. O contrato completo de dependências está nos três arquivos `requirements*.txt`.
 
-Equipe: DataSapiens. Projeto acadêmico OpsVisionAI / OpsVisionIA. Os assets oficiais foram preservados.
+Equipe: DataSapiens. Projeto acadêmico OpsVisionAI / OpsVisionIA.
